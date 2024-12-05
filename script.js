@@ -22,7 +22,7 @@ function showSuccessMessage() {
     }, 1000);
 }
 
-// Typewriter-FX
+// Typewriter-Effekt
 function typeWriter(element, text, delay = 50, callback = null) {
     let i = 0;
     element.innerHTML = '';

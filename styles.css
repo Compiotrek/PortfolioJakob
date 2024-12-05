@@ -32,7 +32,7 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -1;
+    z-index: -2;
     background-color: transparent;
     filter: brightness(1.8) contrast(1.5) saturate(1.6);
     opacity: 0; 
@@ -47,7 +47,7 @@ body, html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
     margin-top: 15rem;
@@ -65,17 +65,18 @@ body, html {
     border-radius: 15px;
     animation: fadeInDown 1s ease-in-out;
     z-index: 2;
-    margin-top: -50px;
-    
+    margin-top: -30px;
 }
 
 .hidden {
     visibility: hidden;
 }
 
+/* Verschiebung der Navigationstabs um 1 cm nach unten */
 .nav-tabs {
     justify-content: center;
-    margin: 6rem 0;
+    margin-top: 4cm; /* Verschiebt die Navigationstabs um 1 cm nach unten */
+    margin-bottom: 2rem; /* Angepasste Margins */
     gap: 2rem;
     z-index: 3;
     border-bottom: none;
@@ -101,6 +102,7 @@ body, html {
     transform: scale(1.1);
 }
 
+/* Verschiebung des Inhaltscontainers um 1 cm nach unten */
 .tab-content {
     text-align: center;
     padding: 3rem;
@@ -109,8 +111,8 @@ body, html {
     background: rgba(20, 20, 20, 0.9);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+    margin-top: 5mm; /* Verschiebt den Inhalt um 1 cm nach unten */
     margin-bottom: 1rem;
-    margin-top: 1rem;
     z-index: 3;
 }
 
@@ -155,7 +157,6 @@ body, html {
 }
 
 .footer {
-    margin-top: 3rem;
     padding: 2rem;
     text-align: center;
     background: transparent;
@@ -280,13 +281,18 @@ body, html {
         font-size: 2rem;
     }
 
-    .nav-tabs .nav-link {
-        padding: 0.8rem 1.5rem;
-        font-size: 1.2rem;
+    .nav-tabs {
+        margin-top: 1cm; /* Beibehaltung der Verschiebung auf kleineren Bildschirmen */
     }
 
     .tab-content {
+        margin-top: 1cm; /* Beibehaltung der Verschiebung auf kleineren Bildschirmen */
         padding: 2rem;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
     }
 
     .projekte-container {
@@ -313,7 +319,8 @@ body, html {
     }
 
     .nav-tabs {
-        margin: 4rem 0;
+        margin-top: 1cm;
+        margin-bottom: 2rem;
     }
 
     .nav-tabs .nav-link {
@@ -322,6 +329,7 @@ body, html {
     }
 
     .tab-content {
+        margin-top: 1cm;
         padding: 1.5rem;
     }
 
