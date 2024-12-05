@@ -1,8 +1,10 @@
 body, html {
     height: 100%;
+    margin: 0;
     font-family: 'Press Start 2P', cursive;
     background-color: #000000;
-    color: #000000;
+    overflow: hidden;
+    color: #f0f0f0;
 }
 
 .background-animation {
@@ -70,11 +72,10 @@ body, html {
     visibility: hidden;
 }
 
-/* Verschiebung der Navigationstabs um 1 cm nach unten */
 .nav-tabs {
     justify-content: center;
-    margin-top: 4cm; /* Verschiebt die Navigationstabs um 1 cm nach unten */
-    margin-bottom: 2rem; /* Angepasste Margins */
+    margin-top: 4cm; 
+    margin-bottom: 2rem; 
     gap: 2rem;
     z-index: 3;
     border-bottom: none;
@@ -100,7 +101,6 @@ body, html {
     transform: scale(1.1);
 }
 
-/* Verschiebung des Inhaltscontainers um 1 cm nach unten */
 .tab-content {
     text-align: center;
     padding: 3rem;
@@ -109,7 +109,7 @@ body, html {
     background: rgba(20, 20, 20, 0.9);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    margin-top: 5mm; /* Verschiebt den Inhalt um 1 cm nach unten */
+    margin-top: 5mm; 
     margin-bottom: 1rem;
     z-index: 3;
 }
@@ -155,12 +155,18 @@ body, html {
 }
 
 .footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
     padding: 2rem;
     text-align: center;
-    background: transparent;
+    background: transparent; 
     box-shadow: none;
     z-index: 3;
+    color: #f0f0f0; 
 }
+
 
 .social-links {
     display: flex;
@@ -280,11 +286,11 @@ body, html {
     }
 
     .nav-tabs {
-        margin-top: 1cm; /* Beibehaltung der Verschiebung auf kleineren Bildschirmen */
+        margin-top: 1cm; 
     }
 
     .tab-content {
-        margin-top: 1cm; /* Beibehaltung der Verschiebung auf kleineren Bildschirmen */
+        margin-top: 1cm; 
         padding: 2rem;
     }
 
