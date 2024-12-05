@@ -3,8 +3,10 @@ body, html {
     margin: 0;
     font-family: 'Press Start 2P', cursive;
     background-color: #000000;
-    overflow: hidden;
+    overflow-x: hidden; 
+    overflow-y: auto; 
     color: #f0f0f0;
+    font-size: 16px; 
 }
 
 .background-animation {
@@ -16,12 +18,6 @@ body, html {
     z-index: -1;
     background: linear-gradient(135deg, #1a1a1a, #0e0e0e);
     animation: backgroundMovement 15s ease-in-out infinite;
-}
-
-@keyframes backgroundMovement {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
 }
 
 #threejs-container {
@@ -47,10 +43,10 @@ body, html {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     padding: 2rem;
-    margin-top: 15rem;
+    margin-top: auto; 
     position: relative;
     z-index: 1;
 }
@@ -68,13 +64,9 @@ body, html {
     margin-top: -30px;
 }
 
-.hidden {
-    visibility: hidden;
-}
-
 .nav-tabs {
     justify-content: center;
-    margin-top: 4cm; 
+    margin-top: 13rem; 
     margin-bottom: 2rem; 
     gap: 2rem;
     z-index: 3;
@@ -109,9 +101,10 @@ body, html {
     background: rgba(20, 20, 20, 0.9);
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-    margin-top: 5mm; 
     margin-bottom: 1rem;
     z-index: 3;
+    max-height: 60vh; 
+    overflow-y: auto; 
 }
 
 .projekte-container {
@@ -122,6 +115,8 @@ body, html {
     gap: 2rem;
     width: 100%;
     padding: 2rem 0;
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
 .projekt {
@@ -164,9 +159,8 @@ body, html {
     background: transparent; 
     box-shadow: none;
     z-index: 3;
-    color: #f0f0f0; 
+    color: #f0f0f0;
 }
-
 
 .social-links {
     display: flex;
@@ -179,6 +173,8 @@ body, html {
     font-size: 1.5rem;
     text-decoration: none;
     transition: transform 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
 }
 
 .social-link:hover {
@@ -277,20 +273,20 @@ body, html {
 
 /* Responsive Design */
 @media (max-width: 992px) {
+    body, html {
+        font-size: 14px; 
+    }
+
     .header {
         padding: 2rem;
     }
 
-    .header h1 {
-        font-size: 2rem;
-    }
-
     .nav-tabs {
-        margin-top: 1cm; 
+        margin-top: 4rem; 
     }
 
     .tab-content {
-        margin-top: 1cm; 
+        margin-top: 4rem; 
         padding: 2rem;
     }
 
@@ -310,20 +306,16 @@ body, html {
 }
 
 @media (max-width: 768px) {
+    body, html {
+        font-size: 12px; 
+    }
+
     .container-fluid {
-        margin-top: 10rem;
-    }
-
-    .header h1 {
-        font-size: 1.5rem;
-    }
-
-    .header p {
-        font-size: 1rem;
+        margin-top: 15%; 
     }
 
     .nav-tabs {
-        margin-top: 1cm;
+        margin-top: 4rem;
         margin-bottom: 2rem;
     }
 
@@ -333,7 +325,7 @@ body, html {
     }
 
     .tab-content {
-        margin-top: 1cm;
+        margin-top: 4rem; 
         padding: 1.5rem;
     }
 
