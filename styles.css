@@ -1,9 +1,8 @@
 body, html {
     height: 100%;
-    margin: 0;
     font-family: 'Press Start 2P', cursive;
     background-color: #000000;
-    color: #f0f0f0;
+    color: #000000;
 }
 
 .background-animation {
